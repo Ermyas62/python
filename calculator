@@ -1,0 +1,56 @@
+def add(a, b):
+    answer = a + b
+    print(str(a) + '+' + str(b) + '=' + str(answer))
+
+
+def sub(a, b):
+    answer = a - b
+    print(str(a) + '-' + str(b) + '=' + str(answer))
+
+
+def mul(a, b):
+    answer = a * b
+    print(str(a) + '*' + str(b) + '=' + str(answer))
+
+
+def div(a, b):
+    ans = a / b
+    answer = ans.__round__(2)
+    print(str(a) + '/' + str(b) + '=' + str(answer))
+
+
+while True:
+    print("write")
+    print("\tA for Addition")
+    print("\tS for Subtraction")
+    print("\tM for Multiplication")
+    print("\tD for Division")
+    print("\tE for Exit")
+
+    Choice = input("Enter your choice: ")
+    if Choice == 'A' or Choice == 'a':
+        print("\tAddition")
+        a = int(input("Enter the first number: "))
+        b = int(input("Enter the second number: "))
+        add(a, b)
+    elif Choice == 'S' or Choice == 's':
+        print("\tSubtraction")
+        a = int(input("Enter the first number: "))
+        b = int(input("Enter the second number: "))
+        sub(a, b)
+    elif Choice == 'M' or Choice == 'm':
+        print("\tMultiplication")
+        a = int(input("Enter the first number: "))
+        b = int(input("Enter the second number: "))
+        mul(a, b)
+    elif Choice == 'D' or Choice == 'd':
+        print("\tDivision")
+        a = int(input("Enter the first number: "))
+        b = int(input("Enter the second number: "))
+        div(a, b)
+    elif Choice != 'D' and Choice != 'd' and Choice != 'A' and Choice != 'a' and Choice != 'S' and Choice != 's' and \
+            Choice != 'M' and Choice != 'm':
+        print('\tplease enter the correct choice')
+    elif Choice == 'E' or Choice == 'e':
+        print("\tProgram ended")
+        quit()
