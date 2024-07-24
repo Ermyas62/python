@@ -1,0 +1,12 @@
+def main():
+    print("\tThis program convert US dollar to Ethiopian birr.")
+    dollars = eval(input("Enter the amount in US dollar: "))
+
+    def convert_to_etb(dollars):
+        return dollars * 69
+
+    etb = convert_to_etb(dollars)
+    print("This is", etb, "ETB")
+
+
+main()
