@@ -1,0 +1,38 @@
+print("Well come to my STAT quiz")
+playing = input("Do you want to take the quiz? ")
+if playing.lower() != "yes":
+    quit()
+print("Okay! let's play.")
+score = 0
+answer_1 = input("what is the minimum value of probability? ")
+if answer_1 == '0':
+    print("Correct")
+    score += 2
+else:
+    print("Incorrect")
+answer_2 = input("variance can take any values. ")
+if answer_2.lower() == "false" or answer_2.lower() == 'no':
+    print("Correct")
+    score += 1
+else:
+    print("Incorrect")
+answer_3 = input("the maximum value for correlation coefficient is? ")
+if answer_3.lower() == "1":
+    print("correct")
+    score += 2
+else:
+    print("incorrect")
+answer_4 = input("statistics deals only numerical values ")
+if answer_4.lower() == "true" or answer_4.lower() == 'yes':
+    print("correct")
+    score += 1
+else:
+    print("incorrect")
+answer_5 = input("variance is the best measure of central tendency. ")
+if answer_5.lower() == "false" or answer_5.lower() == 'no':
+    print("correct")
+    score += 1
+else:
+    print("Incorrect")
+print(f"\nyour score is {score}.")
+print("you got " + f"{round(((score / 7) * 100), 2)}" + "%.")
