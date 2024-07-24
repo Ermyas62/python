@@ -1,0 +1,19 @@
+import random
+
+
+def role_dice():
+    roll = input("roll the dice? (yes/no): ")
+
+    while roll.lower() == "yes".lower():
+        dice1 = random.randint(1, 6)
+        dice2 = random.randint(1, 6)
+        print("rolled dice: {} and {}".format(dice1, dice2))
+        if dice1 == dice2:
+            print("you win")
+            break
+        else:
+            print("you lose")
+        roll = input("roll again? (yes/no): ")
+
+
+role_dice()
