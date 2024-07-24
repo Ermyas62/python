@@ -3,17 +3,26 @@ import random
 
 def role_dice():
     roll = input("roll the dice? (yes/no): ")
+    win = 0
+    lose = 0
 
     while roll.lower() == "yes".lower():
         dice1 = random.randint(1, 6)
         dice2 = random.randint(1, 6)
         print("rolled dice: {} and {}".format(dice1, dice2))
         if dice1 == dice2:
-            print("you win")
-            break
+            print("\tyou win")
+            win += 1
         else:
-            print("you lose")
+            print("\tyou lose")
+            lose += 1
         roll = input("roll again? (yes/no): ")
+    print(f"\tnumber of win = {win}")
+    print(f"\tnumber of lose = {lose}")
+    if win > lose:
+        print("congratulation, you win")
+    else:
+        print("sorry, you lose. Try again later.")
 
 
 role_dice()
