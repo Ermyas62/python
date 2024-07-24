@@ -1,0 +1,43 @@
+import random
+user_wins = 0
+computer_wins = 0
+Draws = 0
+options = ["r", "s", "p"]
+while True:
+    user_inputs = input("\ntype rock/scissors/paper, or Q to quit: ").lower()
+    if user_inputs == "q":
+        break
+    if user_inputs not in options:
+        print("\tplease type the correct letter".upper())
+        continue
+    random_number = random.randint(0, 2)
+    # 0=rock, 1=scissors, 2=paper
+    # three options so randint should range from 0 to 2
+    computer_inputs = options[random_number]
+    print("computer picks", computer_inputs + ".")
+
+    if user_inputs == "r" and computer_inputs == "s":
+        print("you won!")
+        user_wins += 1
+    elif user_inputs == "p" and computer_inputs == "r":
+        print("you won!")
+        user_wins += 1
+    elif user_inputs == "s" and computer_inputs == "p":
+        print("you won!")
+        user_wins += 1
+    elif user_inputs == "r" and computer_inputs == "r":
+        print("Draw!")
+        Draws += 1
+    elif user_inputs == "s" and computer_inputs == "s":
+        print("Draw!")
+        Draws += 1
+    elif user_inputs == "p" and computer_inputs == "p":
+        print("Draw!")
+        Draws += 1
+    else:
+        print("you lost!")
+        computer_wins += 1
+print("you won", str(user_wins), "times.")
+print(f"The computer won {computer_wins} times.")
+print("Draws", str(Draws), "times.")
+print("Good bay!")
