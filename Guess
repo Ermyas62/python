@@ -1,0 +1,28 @@
+import random
+num = input("type a number ")
+if num.isdigit():    # check if num is digit
+    num = int(num)   # convert to integer
+    if num <= 0:
+        print("please type a num large than 0 next time.")
+        quit()
+else:
+    print("enter a number next time")
+    quit()
+ran_num = random.randint(0, num)
+guesses = 0
+while True:
+    guesses += 1
+    guess = input("make a guess ")
+    if guess.isdigit():
+        guess = int(guess)
+    else:
+        print("enter a number next time")
+        continue
+    if guess == ran_num:
+        print("you got it!")
+        break
+    elif guess <= ran_num:
+        print("try a larger number")
+    else:
+        print("try a smaller number")
+print("you got in", guesses, "guesses.")
